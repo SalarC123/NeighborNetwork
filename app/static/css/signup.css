@@ -85,7 +85,6 @@ body {
     color: white;
 }
 
-<<<<<<< HEAD
 .google-button {
     background-color: rgb(244, 243, 243);
     color: black;
@@ -96,14 +95,6 @@ body {
 }
 
 .google-button img {
-=======
-.text-wrapper button:nth-child(5) {
-    background-color: rgb(244, 243, 243);
-    color: black;
-}
-
-.text-wrapper button:nth-child(5) img {
->>>>>>> 89a9f91 ((#3) Refactor Statics Served By Flask)
     background-color: rgb(244, 243, 243);
     color: black;
     width: 10%;
@@ -121,7 +112,6 @@ body {
 .image-wrapper {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
     margin: 3rem 4rem;
 }
 
@@ -157,7 +147,4 @@ body {
 
 .redirect a:hover {
     color: #feb951;
-=======
-    margin: 4rem 5rem;
->>>>>>> 89a9f91 ((#3) Refactor Statics Served By Flask)
 }
