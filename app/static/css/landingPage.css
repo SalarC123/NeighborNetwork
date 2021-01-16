@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.logo {
+    margin-right: auto;
+    padding: 20px;
+}
+
+.logo a {
+    color: #72CAAA;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav p {
+    padding: 20px;
+    font-size: 1.4rem;
+}
+
+nav p a{
+    color: #72CAAA;
+}
+
+nav button {
+    margin: 20px 20px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 0px gray;
+    background-color: #72CAAA;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #5fb595;
+}
+
+nav button a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.first-section {
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-holder {
+    margin:80px 70px;
+}
+
+.section-one-header {
+    font-size: 70px;
+    margin-bottom: 40px;
+    line-height: 4.5rem;
+}
+
+.section-one-desc {
+    margin-bottom: 70px;
+    font-size: 1.3rem;
+}
+
+.content-holder button {
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: #72CAAA;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 0px gray;
+}
+
+.content-holder button:hover {
+    background-color: #5fb595;
+}
+
+.first-section img {
+    margin-right: 3rem;
+    width: 2000px;
+    height: 700px;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: row;
+    height: 32vh;
+    position: relative;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+    justify-content: center;
+}
+
+.num {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.num img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.stats > h1 {
+    font-size: 30px;
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #72CAAA;
+}
+
+.mission h1 {
+    color: white;
+    margin: 10px;
+}
+
+.mission p {
+    color: white;
+    margin:10px 20px;
+}
+
+/* footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 300px;
+}
+
+footer p {
+    color: white;
+} */
