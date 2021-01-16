@@ -1,10 +1,10 @@
-from flask import Blueprint, send_from_directory, current_app
+from flask import Blueprint, send_from_directory, render_template
 
 blueprint = Blueprint('home', __name__)
 
 @blueprint.route('/')
 def root():
-    return current_app.send_static_file('index.html')
+    return render_template('index.html', **{'content': 'test test'})
 
 @blueprint.route('/<path:filepath>')
 def serve(filepath):
