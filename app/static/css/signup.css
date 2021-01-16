@@ -64,10 +64,7 @@ body {
 .text-wrapper input {
     border: none;
     width: 350px;
-<<<<<<< HEAD
     font-size: 0.8em;
-=======
->>>>>>> 89a9f91 ((#3) Refactor Statics Served By Flask)
     outline: none;
     padding: 5px 2px;
     border-bottom: 2px solid rgb(181, 181, 181);
