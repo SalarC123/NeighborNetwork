@@ -17,6 +17,15 @@ def register():
     return {'uid': user.uid, 'email': payload['email'], 'zip_code': zip_code}, 200
 
 
-@blueprint.route('/user', methods=['POST'])
+@blueprint.route('/user')
 def user():
-    pass
+    try:
+        id_token = request.headers.get('Authorization', '').split('Bearer ')[1]
+        decoded_token = auth.verify_id_token(id_token)
+    except:
+        abort(401)
+
+    uid = decoded_token['uid']
+    email = decoded_token['email']
+    
+    return {'uid': uid, 'email': email}, 200

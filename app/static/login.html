@@ -4,7 +4,32 @@
         <title>Log into Neighbour Network</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./login.css">
+        <link rel="stylesheet" href="css/login.css">
+        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script>
+    
+        <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBjwLxS82uYJJUbtOosdTZDTDn0dzfodSs",
+            authDomain: "neighborhood-network.firebaseapp.com",
+            projectId: "neighborhood-network",
+            storageBucket: "neighborhood-network.appspot.com",
+            messagingSenderId: "429038874940",
+            appId: "1:429038874940:web:b956fef4feef9ec77b2e39",
+            measurementId: "G-CNHTE4R74N"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
     </head>
     <body>
         <div class="content-block">
@@ -15,28 +40,28 @@
 
                     <form action="">
                         <label for="email">Your Email</label>
-                        <input type="text" name="email" id="" placeholder="Enter your email">
+                        <input type="text" name="email" id="email" placeholder="Enter your email">
 
                         <label for="password">Your Password</label>
-                        <input type="text" name="password" id="" placeholder="Enter your password">
+                        <input type="text" name="password" id="password" placeholder="Enter your password">
 
-                        <button>Login</button>
+                        <button id="login">Login</button>
                     </form>
 
                     <p>or continue with</p>
 
-                    <button class="google-button"><img src="../assets/googlelogo.png" alt="Google icon">Sign in with Google</button>
+                    <button class="google-button" id="login-google"><img src="assets/googlelogo.png" alt="Google icon">Sign in with Google</button>
                 </div>
             </div>
             <div class="image-holder">
                 <div class="image-wrapper">
                     <h1>Random text about us</h1>
                     <p>Extra Text</p>
-                    <img src="../assets/login.svg" alt="Login SVG">
+                    <img src="assets/login.svg" alt="Login SVG">
                     <p>Don't have an account? <a href="">Click here</a></p>
                 </div>
             </div>
         </div>
-        <script src="./login.js"></script>
+        <script src="js/login.js"></script>
     </body>
 </html>

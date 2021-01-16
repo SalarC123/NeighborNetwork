@@ -25,7 +25,9 @@ signup.onclick = (e) => {
           zip_code: zip
         })
       }
-  ).then(data => {
+  )
+  .then(resp => resp.json())
+  .then(data => {
     console.log(data)
     console.log('User is registered go to login page')
     //TODO
