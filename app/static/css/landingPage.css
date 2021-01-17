@@ -57,7 +57,7 @@ a {
 }
 
 .first-section {
-    height: 100vh;
+    height: 58vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -106,7 +106,7 @@ a {
 .second-section {
     display: flex;
     flex-direction: row;
-    height: 32vh;
+    height: 34.5vh;
     position: relative;
 }
 
@@ -144,11 +144,17 @@ a {
 .mission h1 {
     color: white;
     margin: 10px;
+    font-size: 3rem;
+}
+
+b {
+    font-size: larger;
 }
 
 .mission p {
     color: white;
     margin:10px 20px;
+    font-size: 1.2rem;
 }
 
 .hidden {
