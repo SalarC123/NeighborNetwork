@@ -29,6 +29,7 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
+        var googleAuthProvider = new firebase.auth.GoogleAuthProvider();
         </script>
     </head>
     <body>
@@ -59,7 +60,7 @@
                     <p class="description">Neighbour Network provides effortless communication for neighbourhoods, so starting a food drive or requesting for groceries is now much easier</p>
                     <img src="assets/login.svg" alt="Login SVG">
                     <div class="center-box">
-                        <p class="redirect">Don't have an account? <a href="">Click here</a></p>
+                        <p class="redirect">Don't have an account? <a href="signup.html">Click here</a></p>
                     </div>
                 </div>
             </div>
