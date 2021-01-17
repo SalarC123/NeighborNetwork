@@ -5,6 +5,7 @@ from firebase_admin import auth
 from app.models.user import User
 from app.models.post import Post
 from app.models.reply import Reply
+from app.models.event import Event
 from app.database import db
 
 blueprint = Blueprint('api', __name__, url_prefix='/api')
@@ -98,3 +99,31 @@ def reply(post_id):
         print(e)
 
     return reply.to_dict(), 200
+
+@blueprint.route('/event', methods=['GET', 'POST'])
+def event():
+
+    if request.method == 'GET':
+        all_events = Event.query.all()
+        return {
+            'events': [event.to_dict() for event in all_events]
+        }, 200
+
+    try:
+        id_token = request.cookies.get('id_token')
+        decoded_token = auth.verify_id_token(id_token)
+    except:
+        abort(401)
+
+    user = User.query.get(decoded_token['uid'])
+    payload = request.json
+    payload['poster'] = user.id
+    payload['datetime'] = datetime.datetime.utcnow()
+    try:
+        event = Event(payload)
+        db.session.add(event)
+        db.session.commit()
+    except Exception as e:
+        print(e)
+
+    return event.to_dict(), 200
