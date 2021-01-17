@@ -28,6 +28,7 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
+        var googleAuthProvider = new firebase.auth.GoogleAuthProvider();
         </script>
     </head>
     <body>
@@ -61,7 +62,7 @@
                     <p class="description">Connect with those around you during difficult times to help or request for help with Neighbour Network</p>
                     <img src="./assets/signup.svg" alt="Sign Up SVG">
                     <div class="center-box">
-                        <p class="redirect">Already have an account? <a href="">Click Here</a></p>
+                        <p class="redirect">Already have an account? <a href="login.html">Click Here</a></p>
                     </div>
                 </div>
             </div>
