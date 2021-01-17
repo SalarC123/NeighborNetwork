@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #72CAAA;
+}
+
+.logo {
+    margin-right: auto;
+    padding: 20px;
+}
+
+.logo a {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav p {
+    padding: 20px;
+    font-size: 1.4rem;
+}
+
+nav p a{
+    color: white;
+}
+
+nav button {
+    margin: 20px 20px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 0px gray;
+    background-color: #72CAAA;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #5fb595;
+}
+
+nav button a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text {
+    margin:10px 10px;
+    float:left;
+    font-size: 28px;
+}
+
+.newPost {
+    float: right;
+    height: 20vh;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content-holder {
+    margin:10px 10px;
+    display: inline-block;
+}
+
+
+.content-holder button {
+    font-size: 1rem;
+    outline: none;
+    background-color: white;
+    color: #72CAAA;
+    padding: 10px;
+    border-color: #72CAAA;
+}
+
+.content-holder button:hover {
+    background-color: #5fb595;
+}
+
