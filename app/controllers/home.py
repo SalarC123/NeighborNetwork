@@ -1,6 +1,8 @@
 from flask import Blueprint, send_from_directory, render_template, request
 from firebase_admin import auth
 from app.models.user import User
+from sqlalchemy import func, distinct
+from app.database import db
 
 blueprint = Blueprint('home', __name__)
 
@@ -18,8 +20,14 @@ def root():
     content = 'null'
     if user:
         content = user.to_dict()
+
+    community_count = 0
+    try:
+        community_count = db.session.query(func.count(distinct(User.zip_code)))[0][0]
+    except:
+        pass
     
-    return render_template('index.html', **{'content':content})
+    return render_template('index.html', **{'content':content, 'community_count': community_count})
 
 @blueprint.route('/<path:filepath>')
 def serve(filepath):
