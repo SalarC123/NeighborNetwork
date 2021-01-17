@@ -147,6 +147,10 @@ a {
     margin:10px 20px;
 }
 
+.hidden {
+    display: none;
+}
+
 /* footer {
     display: flex;
     flex-direction: row;

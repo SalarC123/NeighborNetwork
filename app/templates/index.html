@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Neighbour Network</title>
+    <link rel="stylesheet" href="css/landingPage.css">
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
 
@@ -29,14 +31,58 @@
     </script>
 </head>
 <body>
-    {{content}}
-    <button onclick="window.location='/signup.html'">Register</button>
-    <button onclick="window.location='/login.html'">Log In</button>
-    <button id="logout">Logout</button>
+    <nav>
+        <h1 class="logo"><a href="">Neighbour Network</a></h1>
+        <p><a href="/">Home</a></p>
+        <p><a href="">Events</a></p>
+        <p><a href="posts.html">Posts</a></p>
+        <p id="user" class="hidden"></p>
+        <button id="signup" class="signup-button"><a href="signup.html">Sign Up</a></button>
+        <button id="login" class="login-button"><a href="login.html">Login</a></button>
+        <button id="logout" class="hidden"><a>Logout</a></button>
+    </nav>
+
+    <section class="first-section">
+        <div class="content-holder">
+            <p class="section-one-header">Let's Get<br> Through This<br><b>Together</b></p>
+            <p class="section-one-desc">Small description of site</p>
+            <button>Get Started Today</button>
+        </div>
+
+        <img src="assets/landingpage.svg" alt="Landing Page Neihborhood SVG">
+    </section>
+
+    <section class="second-section">
+        <div class="stats">
+            <h1># of Communities Involved</h1>
+            <div class="num">
+                <img src="assets/home.png" alt="House Image">
+                <h2>0</h2>
+            </div>
+        </div>
+        <div class="mission">
+            <h1>Our Mission</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda eos, voluptas ex sint perferendis obcaecati nobis, fugiat officia nesciunt cum quis dicta corrupti dolore ipsa natus ut. Ratione suscipit velit, cupiditate repudiandae nisi deserunt tenetur, atque delectus, voluptates laboriosam tempora hic nesciunt numquam! Libero eos numquam repudiandae deleniti architecto, quas nulla ea doloribus rem perferendis unde cupiditate dignissimos incidunt dicta enim delectus ipsam. Voluptatibus blanditiis porro debitis, impedit excepturi, deleniti rerum id a beatae perspiciatis velit laboriosam quas omnis veritatis recusandae tenetur tempore. Est totam natus quia qui minus, et vitae incidunt nemo sunt fugit accusantium nam fugiat praesentium mollitia!</p>
+        </div>
+    </section>
+
+    <script src="js/landingPage.js"></script>
     <script>
+        const userLabel = document.getElementById("user");
+        const logout = document.getElementById("logout");
+        const login = document.getElementById("login");
+        const signup = document.getElementById("signup");
+
         let profile = {{content|safe}};
+        console.log(profile);
         if (!profile) {
             document.cookie="id_token=;expires=Thu, 01 Jan 1970 00:00:01 GMT";
+        } else {
+            userLabel.innerText = profile.email;
+            login.classList.add("hidden");
+            signup.classList.add("hidden");
+            userLabel.classList.remove("hidden");
+            logout.classList.remove("hidden");
         }
 
         const logoutButton = document.getElementById("logout");
@@ -49,6 +95,7 @@
                 location.href = '/'
             })
             .catch(error=>console.error(error));
+            return false;
         }
     </script>
 </body>
