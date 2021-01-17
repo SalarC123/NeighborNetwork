@@ -89,6 +89,10 @@ a {
     box-shadow: 0 5px 0px gray;
 }
 
+.content-holder button a {
+    color: white;
+}
+
 .content-holder button:hover {
     background-color: #5fb595;
 }
