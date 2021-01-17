@@ -5,7 +5,7 @@
 
 ## Initial
 
-[Setting up your virutal environment](https://flask.palletsprojects.com/en/1.1.x/installation/#create-an-environment)
+[Setting up your virtual environment](https://flask.palletsprojects.com/en/1.1.x/installation/#create-an-environment)
 
 ### Windows
 ```
@@ -23,8 +23,8 @@ pip install -r requirements.txt
 ```
 
 ## Running Server
+Assuming you already activated your virtual environment e.g. `venv\Scripts\activate` (Windows) or `. venv/bin/activate` (Mac)
 ```
-venv\Scripts\activate
 flask run
 ```
 
