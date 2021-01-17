@@ -31,7 +31,14 @@ signup.onclick = (e) => {
     console.log(data)
     console.log('User is registered go to login page')
     //TODO
-  }).catch(error=>console.error(error));
+  })
+  .then(_=> firebase.auth().signInWithEmailAndPassword(email, password))
+  .then(_=> firebase.auth().currentUser.getIdToken(true))
+  .then(idToken=> {
+    document.cookie = `id_token=${idToken}`;
+    location.href = '/';
+  })
+  .catch(error=>console.error(error));
 
   return false;
 };

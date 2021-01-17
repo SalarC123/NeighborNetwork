@@ -11,22 +11,27 @@ login.onclick = (e) => {
   e.preventDefault();
   firebase.auth().signInWithEmailAndPassword(email, password)
   .then(_=> firebase.auth().currentUser.getIdToken(true))
-  .then(idToken=> fetch(
+  .then(idToken=> {
+    document.cookie = `id_token=${idToken}`
+    return fetch(
       '/api/user', 
       {
         method: 'GET',
         headers: {
-          'Accept': 'application/json',
-          'Authorization': `Bearer ${idToken}`
+          'Accept': 'application/json'
         }
-      }))
+      })
+    })
   .then(resp => resp.json())
   .then(user=>{
-    console.log(user)
-    console.log('User is logged in go to login page')
-    //TODO
+    console.log(user);
+    console.log('User is logged in go to login page');
+    location.href = '/';
   })
-  .catch(error=>console.error(error));
+  .catch(error=>{
+    console.error(error)
+    // Should delete the cookie if expired
+  });
 
   return false;
 };
