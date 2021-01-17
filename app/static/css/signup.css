@@ -11,6 +11,7 @@ body {
     font-family: Poppins;
 }
 
+
 .content-block {
     display: flex;
     flex-direction: row;
@@ -26,7 +27,6 @@ body {
     width: var(--box-width);
     height: var(--box-height);
     border-radius: 20px 0 0 20px;
-    box-shadow: 0px 10px 10px rgb(181, 181, 181);
 }
 
 .text-wrapper {
@@ -85,7 +85,6 @@ body {
     color: white;
 }
 
-
 .google-button {
     background-color: rgb(244, 243, 243);
     color: black;
@@ -107,7 +106,6 @@ body {
     width: var(--box-width);
     height: var(--box-height);
     border-radius: 0 20px 20px 0;
-    box-shadow: 20px 10px 20px rgb(164, 164, 164);
 }   
 
 .image-wrapper {
