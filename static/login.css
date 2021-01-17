@@ -64,9 +64,9 @@ body {
 .text-wrapper input {
     border: none;
     width: 350px;
-    font-size: 0.8em;
     outline: none;
     padding: 5px 2px;
+    font-size: 0.9em;
     border-bottom: 2px solid rgb(181, 181, 181);
 }
 
@@ -85,14 +85,9 @@ body {
     color: white;
 }
 
-
 .google-button {
     background-color: rgb(244, 243, 243);
     color: black;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
 }
 
 .google-button img {
@@ -113,39 +108,5 @@ body {
 .image-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 3rem 4rem;
-}
-
-.image-wrapper h1 {
-    color: #FFC672;
-}
-
-.description {
-    color: white;
-}
-
-.image-wrapper img {
-    width: 106%;
-}
-
-.center-box {
-    margin-top: 5rem;
-    display: flex;
-    height: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-.redirect {
-    color: white;
-    font-size: 0.9em;
-}
-
-.redirect a {
-    text-decoration: none;
-    color: #FFC672;
-} 
-
-.redirect a:hover {
-    color: #feb951;
+    margin: 4rem 5rem;
 }
